@@ -96,7 +96,7 @@ def main():
                 webtoonStyles.create_glow(font_name, font_path, text)
                 webtoonStyles.create_strglow(font_name, font_path, text)
                 webtoonStyles.create_strstr(font_name, font_path, text)
-                webtoonStyles.create_shadow(font_name, font_path, text)
+                # webtoonStyles.create_shadow(font_name, font_path, text)
                 count += 1
                 img_cnt += 5
         
