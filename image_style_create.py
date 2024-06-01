@@ -36,7 +36,7 @@ words = [
 # ]
 
 # 반복 횟수
-ITERATE = 2
+ITERATE = 1
 
 # 생성하는 이미지를 저장할 폴더 만들기
 def create_img_dir():
