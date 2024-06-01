@@ -23,38 +23,20 @@ IMAGE_BG_COLOR = (0, 0, 0, 0)
 # 폰트 저장할 리스트
 font_res = []
 
-"""
+
 # 생성할 단어
 words = [
-    '쾅', '헉', '깡', '슝', '앗', 
-    '챙', '꽝', '쓱', '싹', '탁',
-    '띵', '후', '딱', '쿵', '꺅', 
-    '탓', '꺄', '삐', '퍽', '푹',
-    '슥', '척', '앙', '멍', '꽥', 
-    '땡', '쑥', '쏙', '짝', '쪽',
-    '끽', '띡', '덜', '쿨', '활', 
-    '쌩', '윙', '힉', '빽', '질',
-    '죽', '탕', '펑', '웅', '냠', 
-    '응', '동', '둥', '슬', '통',
-    '긁적', '깜짝', '덜덜', '두근', '딸랑', 
-    '멈칫', '서걱', '씨익', '우웅', '움찔',
-    '저벅', '촤악', '쿨럭', '쿠웅', '피식',
-    '휘잉', '펄럭', '크르', '에엑', '쌔앵',
-    '꽈당', '히익', '퍼엉', '스슥', '뭐야',
-    '벌컥', '주륵', '슈슉', '털썩', '띠링',
-    '터벅', '덜컥', '빠앙', '두둥', '찰싹',
-    '북북', '흠칫', '꽈악', '달칵', '찰칵',
-    '깜박', '팔짝', '오물', '아차', '영차',
-    '허걱', '허억', '하하', '싱긋', '꾸깃',
+    '쾅', '헉', '깡', '슝', '앗',
+    '긁적', '깜짝', '덜덜', '두근', '딸랑',
 ]
-"""
 
-words = [
-    '하', "쾅", "덜덜", "쿠궁",
-]
+
+# words = [
+#     '하', "쾅", "덜덜", "쿠궁",
+# ]
 
 # 반복 횟수
-ITERATE = 2
+ITERATE = 1
 
 # 생성하는 이미지를 저장할 폴더 만들기
 def create_img_dir():
@@ -72,7 +54,7 @@ def get_fonts():
             font_res.append(path)
 
 def main():
-    webtoonStyles = TextStyles(IMG_DIR_PATH, IMAGE_BG_COLOR)
+    textStyles = TextStyles(IMG_DIR_PATH, IMAGE_BG_COLOR)
 
     create_img_dir()
     get_fonts()
@@ -91,12 +73,12 @@ def main():
             # 스타일 적용한 이미지 생성
             count = 0
             while ITERATE > count:
-                webtoonStyles.create_none(font_name, font_path, text)
-                webtoonStyles.create_stroke(font_name, font_path, text)
-                webtoonStyles.create_glow(font_name, font_path, text)
-                webtoonStyles.create_strglow(font_name, font_path, text)
-                webtoonStyles.create_strstr(font_name, font_path, text)
-                # webtoonStyles.create_shadow(font_name, font_path, text)
+                textStyles.create_none(font_name, font_path, text)
+                textStyles.create_stroke(font_name, font_path, text)
+                textStyles.create_glow(font_name, font_path, text)
+                textStyles.create_strglow(font_name, font_path, text)
+                textStyles.create_strstr(font_name, font_path, text)
+                # textStyles.create_shadow(font_name, font_path, text)
                 count += 1
                 img_cnt += 5
         
